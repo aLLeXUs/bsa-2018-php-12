@@ -23,6 +23,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(\App\Services\CurrencyServiceInterface::class,
+            \App\Services\DatabaseCurrencyService::class);
+        $this->app->bind(\App\Services\MoneyServiceInterface::class,
+            \App\Services\DatabaseMoneyService::class);
+        $this->app->bind(\App\Services\UserServiceInterface::class,
+            \App\Services\DatabaseUserService::class);
+        $this->app->bind(\App\Services\WalletServiceInterface::class,
+            \App\Services\DatabaseWalletService::class);
     }
 }
