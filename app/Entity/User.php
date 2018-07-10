@@ -9,8 +9,8 @@ class User extends Model
     protected $table = 'user';
     public $timestamps = false;
 
-    public function wallets()
+    public function wallet()
     {
-        return $this->hasMany('App\Entity\Wallet');
+        return $this->hasOne('App\Entity\Wallet');
     }
 }

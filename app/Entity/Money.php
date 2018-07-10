@@ -14,7 +14,7 @@ class Money extends Model
 
     public function currency()
     {
-        return $this->belongsTo('App\Entity\Currency');
+        return $this->hasOne('App\Entity\Currency');
     }
 
     public function wallet()
