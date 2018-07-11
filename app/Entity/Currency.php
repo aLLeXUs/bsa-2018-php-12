@@ -11,6 +11,6 @@ class Currency extends Model
 
     public function monies()
     {
-        return $this->belongsTo('App\Entity\Money');
+        return $this->hasMany('App\Entity\Money');
     }
 }
