@@ -18,7 +18,7 @@ class CreateWalletTable extends Migration
             $table->unsignedInteger('user_id');
             $table->softDeletes();
 
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('user');
         });
     }
 

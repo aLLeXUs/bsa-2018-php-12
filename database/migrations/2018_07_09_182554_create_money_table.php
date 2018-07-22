@@ -20,8 +20,8 @@ class CreateMoneyTable extends Migration
             $table->unsignedInteger('wallet_id');
             $table->softDeletes();
 
-            $table->foreign('currency_id')->references('id')->on('currency')->onDelete('cascade');
-            $table->foreign('wallet_id')->references('id')->on('wallet')->onDelete('cascade');
+            $table->foreign('currency_id')->references('id')->on('currency');
+            $table->foreign('wallet_id')->references('id')->on('wallet');
         });
     }
 
